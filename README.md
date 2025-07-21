@@ -1,60 +1,30 @@
-# 💱 Currency Parser from eskhata.com
+# SSB Currency Parser 🇹🇯
 
-A simple Python script that scrapes the current exchange rates for USD, EUR, and RUB from [eskhata.com](https://eskhata.com/), the official site of Eskhata Bank.
+This script uses Selenium to scrape exchange rates (USD, EUR, RUB) from the official site of **Spitamen Bank (ssb.tj)**.
 
-The script uses `requests`, `fake-useragent`, and `BeautifulSoup` for HTML parsing.
+## 🔧 Requirements
 
----
-
-## 🚀 Features
-
-- 📊 Retrieves current exchange rates for:
-  - US Dollar (USD)
-  - Euro (EUR)
-  - Russian Ruble (RUB)
-- ✅ Parses buy, sell, and NBT rates
-- 💻 Easy to run and extend
-
----
+- Python 3.7+
+- Google Chrome installed
+- ChromeDriver (or use `webdriver-manager`)
 
 ## 📦 Installation
 
-### 1. Clone the repository
-
 ```bash
-git clone https://github.com/your-username/eskhata-currency-parser.git
-cd eskhata-currency-parser
-2. Install dependencies
-Using requirements.txt:
-
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 pip install -r requirements.txt
-Or install manually:
+```
+▶️ Usage
+```
+python ssb.py
+```
+📌 Output Example
+```
+{'currency': 'USD', 'buy': '10.50', 'sell': '10.65'}
+{'currency': 'EUR', 'buy': '11.30', 'sell': '11.50'}
+```
+❗ Notes
+Headless mode is used for faster execution and automation.
 
-pip install requests fake-useragent beautifulsoup4 lxml
-
-🧪 Usage
-Simply run the script:
-
-python eskhata.py
-
-You’ll get a result like this:
-{
-  'usd': {'currency': 'US Dollar', 'buy': '10.90', 'sell': '11.10', 'nbt': '11.00'},
-  'eur': {'currency': 'Euro', 'buy': '11.80', 'sell': '12.00', 'nbt': '11.90'},
-  'rur': {'currency': 'Russian Ruble', 'buy': '0.12', 'sell': '0.14', 'nbt': '0.13'}
-}
-
-🛠 Built With
-Python 3
-requests
-fake-useragent
-beautifulsoup4
-lxml
-
-⚠️ Notes
-If the HTML structure of eskhata.com changes, the script may need to be updated.
-fake-useragent may occasionally fail. If so, you can replace it with a static user-agent string.
-
-👨‍💻 Author
-Telegram: @kemeron1992
-GitHub: github.com/Komron1992
+Delay (time.sleep(3)) ensures that dynamic content is fully loaded.
