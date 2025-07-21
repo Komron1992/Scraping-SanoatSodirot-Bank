@@ -11,8 +11,8 @@ This script uses Selenium to scrape exchange rates (USD, EUR, RUB) from the offi
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/Komron1992/Scraping-SanoatSodirot-Bank
+cd ssb.py
 pip install -r requirements.txt
 ```
 ▶️ Usage
